@@ -24,9 +24,6 @@ jobs:
       - name: Printing Custom Message
         run: echo ${{ inputs.custom_message }}
 
-  job3:
-    runs-on: ubuntu-latest
-    if: ${{ inputs.run-job == 'true' }} 
-    steps:
       - name: Printing run-job boolean value
+        if: ${{ inputs.run-job == 'true' }} 
         run: echo ${{ inputs.run-job }}
